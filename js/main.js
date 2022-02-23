@@ -1,16 +1,15 @@
 'use strict';
 
 {
-  const str = 'hello';
+  const d = [2019, 11, 14];
 
-  // console.log(str.length);
+  // console.log(d.join('/'));
+  console.log(d.join(''));
 
-  // str.substring(開始位置, 終了位置);
-  // console.log(str.substring(2, 4));
-
-  //文字列に対して配列のような記法を使うと、個々の文字にアクセスできる
-
-  console.log(str[1]);
-  // str[1] = 'a';
-  // str[1] に対して値を設定したり、もしくは str に対して forEach() を使ったりできるわけではない
+  const t = '17:08:24';
+  // console.log (t.split(':'));
+  const [hour, minute, second] = t.split(':');
+  console.log(hour);
+  console.log(minute);
+  console.log(second);
 }

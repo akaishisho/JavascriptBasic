@@ -15,18 +15,20 @@
         this.likeCount++;
         this.show();
       }
+
+      // 静的メソッド
+      // thisは使えない（インスタスを作らずに呼び出すため）
+      static showInfo() {
+        console.log('Post class version 1.0');
+      }
   }
+
   const posts = [
     new Post('JavaScriptの勉強中…'),
     new Post('プログラミング楽しい!'),
   ];
 
-  posts[0].like();
-  // posts[0].likeCount++;
-  // posts[0].likeCount++;
-  // posts[0].likeCount++;
-  // posts[0].likeCount++;
+  // posts[0].like();
 
-  // posts[0].show();
-  // posts[1].show();
+  Post.showInfo();
 }

@@ -1,40 +1,11 @@
 'use strict';
 
 {
-  class Post { //親クラス
-    constructor(text) {
-      this.text = text;
-      this.likeCount = 0;
-    }
-
-      show() {
-        console.log(`${this.text} - ${this.likeCount}likes`);
-      }
-
-      like() {
-        this.likeCount++;
-        this.show();
-      }
+  function update() {
+    // document.querySelector('h1').textContent = 'Changed!';
+    // document.querySelector('#target').textContent = 'Changed!';
+    document.getElementById('target').textContent = 'Changed!';
   }
 
-  class SponsoredPost extends Post { //子クラス
-    constructor(text, sponsor) {
-      super(text);
-      this.sponsor = sponsor;
-    }
-
-      show() {
-        console.log(`${this.text} - ${this.likeCount}likes`);
-        console.log(`... sponsored by ${this.sponsor}`);
-      }
-  }
-
-  const posts = [
-    new Post('JavaScriptの勉強中…'),
-    new Post('プログラミング楽しい!'),
-    new SponsoredPost('3分動画でマスターしよう', 'dotinstall'),
-  ];
-
-  posts[2].show();
-  posts[2].like();
+  setTimeout(update, 1000);
 }
